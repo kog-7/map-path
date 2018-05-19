@@ -2,6 +2,7 @@
 
 require map path
 
+
 ![](https://img.shields.io/npm/v/map-path.svg?style=flat)
 
 
@@ -17,6 +18,6 @@ let utils=require('map-path')('Utils');
 ```js
 const nodepath=require('path');
 module.exports={
-  'Utils':'./src/utils.js'
+  'Utils':nodepath.join(__dirname,'./src/utils.js')
 }
 ```

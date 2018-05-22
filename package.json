@@ -1,6 +1,6 @@
 {
   "name": "map-path",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "require map path",
   "main": "index.js",
   "scripts": {

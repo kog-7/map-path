@@ -12,6 +12,7 @@ require map path
 
 ```js  
 let utils=require('map-path')('Utils');
+let utilsUrl=require('map-path')('Utils','url');
 ```
 
 // map path in map-path.js which in the root dir

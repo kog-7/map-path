@@ -12,18 +12,31 @@ let readConfig=(cwd)=>{
   return ph;
 };
 
-let mapPath=(store=null)=>(cwd)=>(ph)=>{
-  if(store===null){
-    store=readConfig(cwd);
+let mapPath=(store=null)=>(cwd)=>{
 
-    if(!(typeof store==='object')){
-      throw `map-path.js must use format like module.exports={name:real path}`;
+  return (ph,type)=>{
+
+    if(store===null){
+      store=readConfig(cwd);
+
+      if(!(typeof store==='object')){
+        throw `map-path.js must use format like module.exports={name:real path}`;
+      }
     }
+    if(!(ph in store)){
+      throw `${ph} is not map in map-path.js`;
+    }
+
+    if(type==='url'){
+      return store[ph];
+    }
+    else{
+      return require(store[ph]);
+    }
+
+
   }
-  if(!(ph in store)){
-    throw `${ph} is not map in map-path.js`;
-  }
-  return require(store[ph]);
+
 };
 
 

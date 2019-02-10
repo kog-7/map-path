@@ -17,11 +17,11 @@ let addJsPrefix = path => {
         fs.statSync(secondPoint);
         outPath = secondPoint;
       } catch (e) {
-        try{
+        try {
           fs.statSync(path);
-          outPath=path;
+          outPath = path;
         }
-        catch(e){
+        catch (e) {
           throw e;
         }
       }

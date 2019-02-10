@@ -1,10 +1,17 @@
 {
   "name": "map-path",
   "version": "1.0.5",
-  "description": "require map path",
-  "main": "index.js",
+  "description": "Create aliases of module paths",
+  "keywords": [
+    "extend",
+    "modules",
+    "node",
+    "path",
+    "resolve"
+  ],
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/**/*"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/kog-7/map-path/issues"
   },
-  "homepage": "https://github.com/kog-7/map-path#readme"
+  "homepage": "https://github.com/kog-7/map-path#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
 }
